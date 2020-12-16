@@ -1,5 +1,5 @@
 class Form {
-
+//IN SKETCH WE MADE CHANGES TO CANVAS SIZE, ACCORDINGLY MAKE CHANGES HERE
   constructor() {
     this.input = createInput("Name");
     this.button = createButton('Play');
@@ -15,11 +15,11 @@ class Form {
 
   display(){
     this.title.html("Car Racing Game");
-    this.title.position(displayWidth/2 - 50, 0);
+    this.title.position(displayWidth/2 - 50, 0); //CAPTURES SCREEN SIZE- DONE IN SKETCH 
 
     this.input.position(displayWidth/2 - 40 , displayHeight/2 - 80);
     this.button.position(displayWidth/2 + 30, displayHeight/2);
-2
+
     this.button.mousePressed(()=>{
       this.input.hide();
       this.button.hide();
