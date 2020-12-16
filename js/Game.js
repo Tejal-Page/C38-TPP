@@ -67,6 +67,9 @@ class Game {
         if (index === player.index){
           cars[index - 1].shapeColor = "red";
           //KEEPS THE ACTIVE CAR AT THE CENTER OF THE SCREEN
+          /*
+          THIS IS TO MAKE SURE THAT YOUR CAR IS IN FOCUS, MAKES THE GAME MORE INTERESTING
+          */
           camera.position.x = displayWidth/2;
           camera.position.y = cars[index-1].y
         }
