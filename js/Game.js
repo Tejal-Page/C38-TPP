@@ -28,7 +28,8 @@ class Game {
       form = new Form()
       form.display();
     }
-
+    
+    //CREATED CAR SPRITES HERE BECAUSE THEY COME INTO PICTURE AFTER WAIT IS OVER...
     car1 = createSprite(100,200);
     car2 = createSprite(300,200);
     car3 = createSprite(500,200);
@@ -44,7 +45,7 @@ class Game {
     if(allPlayers !== undefined){
       //var display_position = 100;
       
-      //index of the array
+      //index of the array- TO ACCESS THE CAR ARRAY
       var index = 0;
 
       //x and y position of the cars
@@ -61,9 +62,11 @@ class Game {
         y = displayHeight - allPlayers[plr].distance;
         cars[index-1].x = x;
         cars[index-1].y = y;
-
+        
+        /*HERE YOU ARE CHECKING FOR ACITVE CARS, IF THE INDEX IS SAME AS PLAER INDEX THEN MAKE IT RED*/
         if (index === player.index){
           cars[index - 1].shapeColor = "red";
+          //KEEPS THE ACTIVE CAR AT THE CENTER OF THE SCREEN
           camera.position.x = displayWidth/2;
           camera.position.y = cars[index-1].y
         }
